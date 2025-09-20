@@ -1,0 +1,51 @@
+/* Mobile styles (up to 767px) */
+@media all and (max-width: 767px) {
+  .heroImages {
+    flex-direction: column;
+  }
+  .heroImages img {
+    width: 100%;
+    padding: 0;
+    height: 60vmin;
+    margin-bottom: 1rem;
+  }
+  .writeup h1 {
+    font-size: 8vmin;
+    line-height: 1.2;
+  }
+  .writeup p {
+    font-size: 4vmin;
+  }
+  .writeup button {
+    font-size: 4vmin;
+    padding: 3vmin 6vmin;
+  }
+}
+
+/* Tablet styles (768px to 1023px) */
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .heroImages {
+    gap: 1rem;
+  }
+  .heroImages img {
+    height: 50vmin;
+  }
+  .writeup h1 {
+    font-size: 7vmin;
+    line-height: 1.3;
+  }
+  .writeup p {
+    font-size: 3.5vmin;
+  }
+  .writeup button {
+    font-size: 3.5vmin;
+    padding: 2.5vmin 5vmin;
+  }
+}
+
+/* Large tablet styles (1024px and up) */
+@media all and (min-width: 1024px) {
+  .heroImages img {
+    height: 40vmin;
+  }
+}

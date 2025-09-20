@@ -1,0 +1,270 @@
+/* Mobile Responsive Enhancements */
+
+/* Global Mobile Styles */
+@media (max-width: 768px) {
+  /* Ensure touch-friendly interactions */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Improve text readability on mobile */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Better scrolling on mobile */
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevent horizontal scrolling */
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+}
+
+/* Mobile Navigation Enhancements */
+@media (max-width: 767px) {
+  .mobile-nav {
+    position: relative;
+  }
+
+  .mobile-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #e5e7eb;
+    z-index: 50;
+    animation: slideDown 0.3s ease-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Enhanced Button Styles for Mobile */
+@media (max-width: 768px) {
+  button,
+  .btn {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    touch-action: manipulation;
+  }
+
+  /* Prevent double-tap zoom on buttons */
+  button,
+  input,
+  textarea,
+  select {
+    touch-action: manipulation;
+  }
+}
+
+/* Image Optimization for Mobile */
+@media (max-width: 768px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Lazy loading for better performance */
+  img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  img[loading="lazy"].loaded {
+    opacity: 1;
+  }
+}
+
+/* Typography Scaling for Mobile */
+@media (max-width: 480px) {
+  h1 {
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: clamp(1.25rem, 6vw, 2rem);
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: clamp(1.125rem, 5vw, 1.5rem);
+    line-height: 1.4;
+  }
+
+  p {
+    font-size: clamp(0.875rem, 4vw, 1rem);
+    line-height: 1.6;
+  }
+}
+
+/* Container and Layout Improvements */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+
+  /* Better spacing for mobile */
+  .mt-10 {
+    margin-top: 2.5rem;
+  }
+  .mb-10 {
+    margin-bottom: 2.5rem;
+  }
+  .py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+/* Card and Component Mobile Styles */
+@media (max-width: 768px) {
+  .card {
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .hero-section {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+}
+
+/* Form Elements Mobile Optimization */
+@media (max-width: 768px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #e5e7eb;
+    width: 100%;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+}
+
+/* Animation Performance Optimizations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .card {
+    border: 2px solid #000;
+  }
+
+  button {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Landscape Mobile Optimization */
+@media (max-width: 896px) and (orientation: landscape) {
+  .hero-section {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: clamp(1.25rem, 6vw, 2rem);
+  }
+}
+
+/* Print Styles for Mobile */
+@media print {
+  .mobile-nav,
+  .hamburger-btn,
+  button {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+}
+
+/* Accessibility Enhancements */
+@media (max-width: 768px) {
+  /* Focus indicators */
+  *:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+
+  /* Skip links */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #3b82f6;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 100;
+  }
+
+  .skip-link:focus {
+    top: 6px;
+  }
+}
+
+/* Performance Optimizations */
+@media (max-width: 768px) {
+  /* Reduce motion for better performance on low-end devices */
+  .animation-heavy {
+    animation: none !important;
+  }
+
+  /* Optimize transforms */
+  .smooth-transform {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+}

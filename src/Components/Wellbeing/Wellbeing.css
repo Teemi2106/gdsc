@@ -1,0 +1,12 @@
+/* Wellbeing.css */
+@media (max-width: 768px) {
+  .wellbeing-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .wellbeing-container img {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+}
