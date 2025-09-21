@@ -8,7 +8,7 @@ import "./Hero.css";
 interface Props {}
 
 const HeroImages = (props: Props) => {
-  const { ref, isInView } = useInViewAnimation({ threshold: 0.2 });
+  const { ref, isInView } = useInViewAnimation({ threshold: 0.5 });
 
   const containerVariants = {
     hidden: { opacity: 0 },

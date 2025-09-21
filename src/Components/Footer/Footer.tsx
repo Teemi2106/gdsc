@@ -6,7 +6,6 @@ import fb from "../../Assets/Footer/fb.png";
 import ln from "../../Assets/Footer/ln.png";
 import ig from "../../Assets/Footer/instagram.png";
 import tw from "../../Assets/Footer/twitter.png";
-import Navbar from "../Header/Navbar";
 
 interface Props {}
 
@@ -34,6 +33,8 @@ const Footer = (props: Props) => {
       },
     },
   };
+
+  const navItems = ["About", "Services", "Team", "Contact"];
 
   return (
     <motion.footer
@@ -87,7 +88,18 @@ const Footer = (props: Props) => {
         </motion.div>
       </motion.div>
       <motion.div variants={itemVariants}>
-        <Navbar />
+        <nav className="desktop-nav">
+          <ul className="flex justify-around gap-8 text-white">
+            {navItems.map((item) => (
+              <li
+                key={item}
+                className="cursor-pointer hover:text-gray-900 transition-colors"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </nav>
       </motion.div>
     </motion.footer>
   );

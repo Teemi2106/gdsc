@@ -5,7 +5,7 @@ import { useInViewAnimation } from "../../hooks/useInViewAnimation";
 interface Props {}
 
 const Writeup = (props: Props) => {
-  const { ref, isInView } = useInViewAnimation({ threshold: 0.2 });
+  const { ref, isInView } = useInViewAnimation({ threshold: 0.5 });
 
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },

@@ -8,7 +8,7 @@ import "./Wellbeing.css";
 interface Props {}
 
 const Wellbeing = (props: Props) => {
-  const { ref, isInView } = useInViewAnimation({ threshold: 0.2 });
+  const { ref, isInView } = useInViewAnimation({ threshold: 0.5 });
 
   const containerVariants = {
     hidden: { opacity: 0 },

@@ -7,7 +7,7 @@ import icon from "../../Assets/Organic/icon.png";
 interface Props {}
 
 const Organic = (props: Props) => {
-  const { ref, isInView } = useInViewAnimation({ threshold: 0.2 });
+  const { ref, isInView } = useInViewAnimation({ threshold: 0.5 });
 
   const containerVariants = {
     hidden: { opacity: 0 },

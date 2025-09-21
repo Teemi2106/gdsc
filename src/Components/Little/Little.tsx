@@ -7,7 +7,7 @@ import illustration from "../../Assets/Little/illustration.png";
 interface Props {}
 
 const Little = (props: Props) => {
-  const { ref, isInView } = useInViewAnimation({ threshold: 0.2 });
+  const { ref, isInView } = useInViewAnimation({ threshold: 0.5 });
 
   const containerVariants = {
     hidden: { opacity: 0 },
