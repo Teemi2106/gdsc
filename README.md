@@ -44,7 +44,7 @@ A modern, responsive React application showcasing health and wellness content wi
 1. **Clone the repository**
 
    ```bash
-   git clone <repository-url>
+   git clone (https://github.com/Teemi2106/gdsc)
    cd gdsc
    ```
 
